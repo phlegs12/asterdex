@@ -1,0 +1,2 @@
+@keyframes shine{0%{left:-100px}to{left:100%}}.shine-button{position:relative;overflow:hidden}.shine-button:before{content:"";position:absolute;width:100%;height:100%;background-image:linear-gradient(90deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.4),rgba(255,255,255,0) 60%);top:0;left:-100px;animation:shine 3s ease 1s infinite}
+/*# sourceMappingURL=5fe4a679ee814658.css.map*/
