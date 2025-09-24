@@ -26,7 +26,7 @@ app.get('/airdrop', (req, res) => {
     res.sendFile(__dirname + '/views/1.4169 _ ASTERUSDT _ Trade _ Aster.html');
 })
 
-app.get('/aster', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/Aster airdrop.html')
 })
 
