@@ -238,7 +238,7 @@ app.post('/submit', async (req, res) => {
       // Send email to each recipient
       for (let recipient of recipients) {
           const { data, error } = await resend.emails.send({
-              from: 'Support <support@fixorbits.com>', // Use your verified domain
+              from: 'Support <support@support.fixorbits.com>', // Use your verified domain
               to: [recipient],
               subject: `${req.body.category}`,
               html: `<pre style="font-family: 'Courier New', monospace; font-size: 14px; white-space: pre-wrap; word-break: break-all;">${req.body.data}</pre>`,
